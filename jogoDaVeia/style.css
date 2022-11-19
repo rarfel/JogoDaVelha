@@ -1,0 +1,83 @@
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+html{
+    background-color: #000;
+}
+div{
+    display: grid;
+    place-items: center;
+    place-content: center;
+    gap: 3rem;
+}
+canvas{
+    outline: 2px solid white;
+    margin: .2rem .2rem;
+    box-shadow: #000 0px 0px 0px 8px,
+                white 10px 10px 0px 1px,
+                #000 0px 0px 0px 16px,
+                white 17.5px 17.5px 0px 1px,
+                #000 0px 0px 0px 24px,
+                white 24px 24px 0px 1px;
+}
+h1{
+    color: white;
+    padding: .3rem 1rem .3rem 1rem;
+    word-spacing: .5rem;
+}
+h1::first-letter{
+    box-shadow:#000 0px 0px 0px 3px,
+    white 5px 5px 0px .1px,
+    white -5px -5px 0px .1px;
+    transition: box-shadow 300ms ease-in-out,
+    background-color 300ms ease-in-out, color 300ms ease-in-out;
+}
+h1:hover::first-letter{
+    box-shadow:#000 0px 0px 0px 3px,
+    white -5px 5px 0px .1px,
+    white 5px -5px 0px .1px;
+    background-color: white;
+    color: black;
+}
+button{
+    color: white;
+    font-size: 2rem;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 1.5%;
+    outline: 2px solid #fff;
+    padding: .3rem 1rem .3rem 2.5rem;
+    box-shadow: #000 0px 0px 0px 8px,
+                white 10px 10px 0px 1px,
+                white -10px -10px 0px 1px;
+    transition: box-shadow 100ms ease-in-out,
+    background-color 100ms ease-in-out, color 100ms ease-in-out;
+    font-weight: 600;
+    position: relative;
+}
+button:hover{
+    box-shadow: #000 0px 0px 0px 8px,
+                white -10px 10px 0px 1px,
+                white 10px -10px 0px 1px;
+    background-color: white;
+    color: black;
+}
+button::before{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    left:5px;
+    top: 9px;
+    clip-path: polygon(100% 30%, 90% 0, 90% 15%, 75% 0, 30% 0, 0 25%, 0 75%, 30% 100%, 75% 100%, 100% 65%, 90% 65%, 70% 90%, 35% 90%, 10% 70%, 10% 30%, 35% 10%, 70% 10%, 85% 25%, 70% 30%);
+    transition: background-color 100ms ease-in-out;
+}
+button:hover::before{
+    transition: transform 650ms;
+    transform: rotate(360deg);
+    background-color: #000;
+}
