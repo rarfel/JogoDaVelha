@@ -220,7 +220,6 @@ function start(){
             mouse.x = e.offsetX
             mouse.y = e.offsetY
             testaQuadrado(mouse.x,mouse.y)
-            console.log(e);
         }
     })
 }
